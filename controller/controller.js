@@ -2,10 +2,20 @@ const postArray = require("../dataBlog/dataBlog");
 
 
 const index = (req, res) => {
-    res.json({
-        data: postArray,
-        count: postArray.length
-    });
+    const clientParams = req.query.tags;
+    if (clientParams === undefined) {
+        res.json({
+            data: postArray,
+            count: postArray.length
+        });
+    } else {
+        const postArrayToShow = postArray.filter((currItem) => currItem.tags.includes(clientParams))
+        res.json({
+            show: postArrayToShow,
+            message: "Array filtrato",
+            counter: postArrayToShow.length
+        });
+    };
 };
 
 
@@ -35,7 +45,7 @@ const update = (req, res) => {
 };
 
 
-const remove = (req, res) => {
+const destroy = (req, res) => {
     const clientId = parseInt(req.params.id);
     const postToDelete = postArray.find((currItem) => currItem.id === parseInt(clientId));
     const indexPost = postArray.indexOf(postToDelete);
@@ -59,5 +69,5 @@ module.exports = {
     show, 
     create, 
     update, 
-    remove
+    destroy
 };

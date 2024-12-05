@@ -15,7 +15,7 @@ router.post("/", controller.create);
 router.put("/:id", controller.update);
 
 // Delete
-router.delete("/:id", controller.remove);
+router.delete("/:id", controller.destroy);
 
 
 module.exports = router
