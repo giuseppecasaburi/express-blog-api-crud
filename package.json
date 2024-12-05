@@ -1,0 +1,16 @@
+{
+  "name": "express-blog-api-crud",
+  "version": "1.0.0",
+  "description": "**Milestone 1**\r - Creiamo un controller per i nostri post, in una cartella `controllers.` ✔\r - All’interno, prepariamo tutte le funzioni necessarie e copiamo in ciascuna la logica delle funzioni che attualmente si trovano nel router (al momento restituiscono solo dei messaggi). ✖\r - Poi torniamo sul file delle rotte. Qui importiamo le funzioni dichiarate nel controller e le associamo alle varie rotte, come visto in classe. ✖\r - Testiamo su postman se chiamando gli endpoint riceviamo effettivamente le stesse risposte che avevamo prima. ✖",
+  "main": "blog.js",
+  "scripts": {
+    "start": "node blog.js",
+    "dev": "node --watch blog.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}
