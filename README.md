@@ -9,8 +9,8 @@
 
 **Milestone 2**
 Ora passiamo ad implementare le logiche delle nostre CRUD:
-- Index dovrà restituire la lista dei post in formato JSON ✖
-- Show dovrà restituire un singolo post in formato JSON ✖
+- Index dovrà restituire la lista dei post in formato JSON ✔
+- Show dovrà restituire un singolo post in formato JSON ✔
 - Destroy dovrà eliminare un singolo post dalla lista, stampare nel terminale (`console.log`) la lista aggiornata, e rispondere con uno stato 204 e nessun contenuto. ✖
 
 **Bonus**
