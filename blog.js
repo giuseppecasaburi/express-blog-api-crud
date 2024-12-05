@@ -8,7 +8,7 @@ app.get("/", (req, res) => {
     res.json("Hello server");
 })
 
-app.use("/", router);
+app.use("/posts", router);
 
 app.listen(port, () => {
     console.log("Server avviato con successo");

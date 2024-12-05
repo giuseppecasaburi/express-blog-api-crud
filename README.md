@@ -3,9 +3,9 @@
 
 **Milestone 1**
 - Creiamo un controller per i nostri post, in una cartella `controllers.` ✔
-- All’interno, prepariamo tutte le funzioni necessarie e copiamo in ciascuna la logica delle funzioni che attualmente si trovano nel router (al momento restituiscono solo dei messaggi). ✖
-- Poi torniamo sul file delle rotte. Qui importiamo le funzioni dichiarate nel controller e le associamo alle varie rotte, come visto in classe. ✖
-- Testiamo su postman se chiamando gli endpoint riceviamo effettivamente le stesse risposte che avevamo prima. ✖
+- All’interno, prepariamo tutte le funzioni necessarie e copiamo in ciascuna la logica delle funzioni che attualmente si trovano nel router (al momento restituiscono solo dei messaggi). ✔
+- Poi torniamo sul file delle rotte. Qui importiamo le funzioni dichiarate nel controller e le associamo alle varie rotte, come visto in classe. ✔
+- Testiamo su postman se chiamando gli endpoint riceviamo effettivamente le stesse risposte che avevamo prima. ✔
 
 **Milestone 2**
 Ora passiamo ad implementare le logiche delle nostre CRUD:

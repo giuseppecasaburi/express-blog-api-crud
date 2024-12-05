@@ -1,30 +1,21 @@
 const express = require("express");
 const router = express.Router();
+const controller = require("../controller/controller");
 
 // Index
-router.get("/", (req, res) => {
-    res.json("Sono index");
-});
+router.get("/", controller.index);
 
 // Show
-router.get("/:id", (req, res) => {
-    res.json("Sono show");
-});
+router.get("/:id", controller.show);
 
 // Create
-router.post("/", (req, res) => {
-    res.json("Sono create");
-});
+router.post("/", controller.create);
 
 // Update
-router.put("/:id", (req, res) => {
-    res.json("Sono update");
-});
+router.put("/:id", controller.update);
 
 // Delete
-router.delete("/:id", (req, res) => {
-    res.json("Sono delete");
-});
+router.delete("/:id", controller.remove);
 
 
 module.exports = router
