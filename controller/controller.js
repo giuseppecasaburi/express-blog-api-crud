@@ -36,7 +36,21 @@ const update = (req, res) => {
 
 
 const remove = (req, res) => {
-    res.json("Sono delete");
+    const clientId = parseInt(req.params.id);
+    const postToDelete = postArray.find((currItem) => currItem.id === parseInt(clientId));
+    const indexPost = postArray.indexOf(postToDelete);
+
+    if (indexPost === -1) {
+        res.statusCode = 404;
+        res.json({
+            error: "True",
+            message: "Post not found"
+        });
+    } else {
+        postArray.splice(indexPost, 1);
+        res.status(204).end()
+        console.log(postArray);
+    };
 };
 
 
