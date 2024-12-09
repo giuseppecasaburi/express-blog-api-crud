@@ -36,12 +36,23 @@ const show = (req, res) => {
 
 
 const create = (req, res) => {
-    res.json("Sono create");
+    const ingressData = req.body;
+    console.log(ingressData);
+
+    const lastIndex = postArray.length - 1;
+    const lastId = postArray[lastIndex].id;
+    const newId = lastId + 1;
+    
+    const newPost = {id: newId, ...ingressData};
+    postArray.push(newPost);
+
+    res.statusCode = 201;
+    res.json(newPost);
 };
 
 
 const update = (req, res) => {
-    res.json("Sono update");
+    
 };
 
 
