@@ -38,10 +38,10 @@ Implementiamo quindi la logica per aggiungere un nuovo post al nostro blog, e pr
 Testiamolo con postman. ✔
 
 **Milestone 4**
-Ripetiamo il procedimento per la rotta di Update, in modo da avere la possibilità di modificare le nostre risorse.
+Ripetiamo il procedimento per la rotta di Update, in modo da avere la possibilità di modificare le nostre risorse. ✔
 
 **Bonus**
-- In Update, controllare se il parametro si riferisce ad un post esistente, in caso contrario, rispondere con uno stato 404 e un messaggio d’errore, sempre in formato JSON.
+- In Update, controllare se il parametro si riferisce ad un post esistente, in caso contrario, rispondere con uno stato 404 e un messaggio d’errore, sempre in formato JSON. ✔
 
 # Api crud parte 3
 ## Traccia

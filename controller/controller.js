@@ -52,7 +52,31 @@ const create = (req, res) => {
 
 
 const update = (req, res) => {
-    
+    const idDaModificare = parseInt(req.params.id);
+    let elemDaModificare = null;
+
+    for (let i = 0; i < postArray.length; i++) {
+        const currItem = postArray[i];
+        
+        if (currItem.id === idDaModificare) {
+            postArray[i] = {
+                ...currItem,
+                ...req.body
+            };
+            elemDaModificare = postArray[i];
+            break;
+        };
+    };
+    if (!elemDaModificare) {
+        res.json({
+            code: 404,
+            message: "Element not found"
+        })
+    } else {
+    res.json({
+        message: "Elemento modificato"
+    });        
+    }
 };
 
 
