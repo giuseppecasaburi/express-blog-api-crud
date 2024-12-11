@@ -1,4 +1,5 @@
 const postArray = require("../dataBlog/dataBlog");
+const notFoundFunction = require("../middleware/notFound");
 
 
 const index = (req, res) => {
@@ -26,11 +27,7 @@ const show = (req, res) => {
     if (postToShow != undefined) {
         res.json(postToShow);
     } else {
-        res.statuCode = 404;
-        res.json({
-            error: "True",
-            message: "Post not found"
-        });
+        notFoundFunction;
     };
 };
 
@@ -68,10 +65,7 @@ const update = (req, res) => {
         };
     };
     if (!elemDaModificare) {
-        res.json({
-            code: 404,
-            message: "Element not found"
-        })
+        notFoundFunction;
     } else {
     res.json({
         message: "Elemento modificato"
@@ -86,11 +80,7 @@ const destroy = (req, res) => {
     const indexPost = postArray.indexOf(postToDelete);
 
     if (indexPost === -1) {
-        res.statusCode = 404;
-        res.json({
-            error: "True",
-            message: "Post not found"
-        });
+        notFoundFunction;
     } else {
         postArray.splice(indexPost, 1);
         res.status(204).end()
